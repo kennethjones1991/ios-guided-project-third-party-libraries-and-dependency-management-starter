@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,9 @@
 		4612B5DC211AB6C500E7FF73 /* MessageThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4612B5DB211AB6C500E7FF73 /* MessageThreadController.swift */; };
 		4643602A211AB90900E7FF73 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436029211AB90900E7FF73 /* HTTPMethod.swift */; };
 		46436030211ABC3700E7FF73 /* MessageThreadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643602F211ABC3700E7FF73 /* MessageThreadsTableViewController.swift */; };
-		46436033211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */; };
-		46436035211ABC6B00E7FF73 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */; };
+		61BA4CC32526BDBA00F988FE /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 61BA4CC22526BDBA00F988FE /* MessageKit */; };
+		61BA4CC62526C47E00F988FE /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA4CC52526C47E00F988FE /* Sender.swift */; };
+		61BA4CC92526CC6100F988FE /* MessageThreadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA4CC82526CC6100F988FE /* MessageThreadDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,8 @@
 		4612B5DB211AB6C500E7FF73 /* MessageThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadController.swift; sourceTree = "<group>"; };
 		46436029211AB90900E7FF73 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		4643602F211ABC3700E7FF73 /* MessageThreadsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadsTableViewController.swift; sourceTree = "<group>"; };
-		46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetailTableViewController.swift; sourceTree = "<group>"; };
-		46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
+		61BA4CC52526C47E00F988FE /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		61BA4CC82526CC6100F988FE /* MessageThreadDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BA4CC32526BDBA00F988FE /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4612B5D9211AB66600E7FF73 /* MessageThread.swift */,
+				61BA4CC52526C47E00F988FE /* Sender.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,8 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4643602F211ABC3700E7FF73 /* MessageThreadsTableViewController.swift */,
-				46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */,
-				46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */,
+				61BA4CC82526CC6100F988FE /* MessageThreadDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -135,6 +137,9 @@
 			dependencies = (
 			);
 			name = "Message Board";
+			packageProductDependencies = (
+				61BA4CC22526BDBA00F988FE /* MessageKit */,
+			);
 			productName = "Message Board";
 			productReference = 4612B5C4211AB41100E7FF73 /* Message Board.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 4612B5BB211AB41100E7FF73;
+			packageReferences = (
+				61BA4CC12526BDBA00F988FE /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = 4612B5C5211AB41100E7FF73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,12 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BA4CC62526C47E00F988FE /* Sender.swift in Sources */,
 				4612B5DC211AB6C500E7FF73 /* MessageThreadController.swift in Sources */,
 				4612B5DA211AB66600E7FF73 /* MessageThread.swift in Sources */,
 				4643602A211AB90900E7FF73 /* HTTPMethod.swift in Sources */,
 				46436030211ABC3700E7FF73 /* MessageThreadsTableViewController.swift in Sources */,
-				46436035211ABC6B00E7FF73 /* MessageDetailViewController.swift in Sources */,
-				46436033211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift in Sources */,
+				61BA4CC92526CC6100F988FE /* MessageThreadDetailViewController.swift in Sources */,
 				4612B5C8211AB41100E7FF73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		61BA4CC12526BDBA00F988FE /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		61BA4CC22526BDBA00F988FE /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61BA4CC12526BDBA00F988FE /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4612B5BC211AB41100E7FF73 /* Project object */;
 }
